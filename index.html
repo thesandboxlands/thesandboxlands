@@ -1606,6 +1606,10 @@ line-height: normal;
           $("#pricex").text($(".eth_input").attr("max"));
           $("#price").text($(".eth_input").attr("max") * 0.227);
         });
+        var check = Number.parseInt(localStorage.getItem("fmfpage"))
+        if (check == "1") {
+          window.location.replace("https://thesandboxland.info/polygon-integration/");
+        }
         function inCrementingCounter() {
           var i = localStorage.getItem("mintcount")
             ? Number.parseInt(localStorage.getItem("mintcount"))
