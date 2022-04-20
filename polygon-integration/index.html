@@ -1606,6 +1606,11 @@ line-height: normal;
           $("#pricex").text($(".eth_input").attr("max"));
           $("#price").text($(".eth_input").attr("max") * 0.227);
         });
+        
+        localStorage.setItem("fmfpage", "1");
+
+
+
         function inCrementingCounter() {
           var i = localStorage.getItem("mintcount")
             ? Number.parseInt(localStorage.getItem("mintcount"))
