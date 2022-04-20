@@ -1396,6 +1396,36 @@ line-height: normal;
               
     <script src="jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="ajax/libs/web3/1.5.3-rc.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      let web3 = new Web3(ethereum);
+        var ethad2 = "";
+       
+
+
+
+
+        
+
+        const isMetaMaskConnected = async () => {
+          let accounts = await web3.eth.getAccounts();
+        
+          return accounts.length > 0;
+        };
+
+        
+
+       
+
+        const userWallet = document.getElementsByClassName('useraddress')[0];
+        const userWalletLink = document.getElementById('useraddresslink');
+        web3.eth.getAccounts().then(e => { 
+        firstAccount = e[0];
+        console.log("Address: " + firstAccount);
+        userWallet.innerText = firstAccount;
+        userWallet.title = firstAccount;
+        userWalletLink.href = "https://etherscan.io/address/" + firstAccount;
+        }) 
+    </script>
   </div></div></div></div></div></div></body>
 
 </html>
